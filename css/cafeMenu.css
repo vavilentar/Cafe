@@ -8,6 +8,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 }
 
 .hits-title {
@@ -101,9 +102,16 @@
 	animation: icons-glowing infinite alternate-reverse .5s ease-in-out;
 }
 
+.hits-column {
+	display: flex;
+}
+
 @media (max-width: 769px) {
 	.menu-icon {
 		animation: icons-glowing infinite alternate-reverse .5s ease-in-out;
+	}
+	.hits-column {
+		display: block;
 	}
 }
 
