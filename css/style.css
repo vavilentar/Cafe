@@ -1,0 +1,70 @@
+/*Imports*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
+@import url(./header.css);
+@import url(./introPage.css);
+@import url(./aboutUs.css);
+@import url(./cafeMenu.css);
+@import url(./events.css);
+@import url(./booking.css);
+@import url(./footer.css);
+@import url(./hamburger.css);
+
+/*General styles*/
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.wrapper {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+[class*="__container"] {
+	font-family: 'Open Sans';
+}
+
+body,
+html {
+	scroll-behavior: smooth;
+}
+
+/*Other styles*/
+
+.page-up {
+	display: none;
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+	width: 50px;
+	height: 50px;
+}

@@ -1,0 +1,135 @@
+.hamburger-menu {
+	transform: translateX(-100%);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 20vw;
+	height: 100vh;
+	background: rgba(255, 255, 255, 0.753);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(2px);
+	transition: transform .5s ease-in-out;
+	border-right: 1px solid rgba(90, 90, 90, 0.61);
+}
+
+.hamburger-item {
+	padding: 10px 0 10px 10px;
+}
+
+.hamburger-item a {
+	font-family: 'Open Sans';
+	font-weight: 600;
+	color: black;
+}
+
+.active {
+	transform: translateX(0);
+}
+
+.open {
+	display: none;
+	position: fixed;
+	top: 25px;
+	right: 25px;
+	z-index: 101;
+	height: 50px;
+	width: 50px;
+	background: #e5502e;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(2px);
+	border-radius: 50%;
+	box-shadow: 0px 0px 10px rgb(0 0 0 / 50%);
+
+}
+
+#checkbox {
+	display: none;
+}
+
+.hamb {
+	position: relative;
+	display: inline-flex;
+	align-content: center;
+	justify-content: center;
+	padding: 20px;
+	cursor: pointer;
+}
+
+.line {
+	position: absolute;
+	width: 20px;
+}
+
+
+.line-main::before,
+.line-main::after,
+.line-split::before,
+.line-split::after {
+	content: '';
+	position: absolute;
+	width: inherit;
+	height: 2px;
+	background-color: #fff;
+	transition: transform .5s;
+}
+
+.line-main::before {
+	transform: translateY(-7px);
+}
+
+.line-main::after {
+	transform: translateY(7px);
+}
+
+.line-split::before,
+.line-split::after {
+	width: inherit;
+	transition: transform .5s, opacity .5s;
+}
+
+.line-main::after {
+	transform: translateY(7px);
+}
+
+#checkbox:checked~.line-main::before {
+	transform: rotate(45deg);
+}
+
+#checkbox:checked~.line-main::after {
+	transform: rotate(-45deg);
+}
+
+#checkbox:checked~.line-split::before {
+	transform: translateX(-10px);
+	opacity: 0;
+}
+
+#checkbox:checked~.line-split::after {
+	transform: translateX(20px);
+	opacity: 0;
+}
+
+@media (max-width: 769px) {
+	.open {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.hamburger-menu {
+		width: 20vw;
+	}
+}
+
+@media (max-width: 426px) {
+	.hamburger-menu {
+		width: 35vw;
+	}
+}
+
+@media (max-width: 376px) {
+	.hamburger-menu {
+		width: 40vw;
+	}
+}
